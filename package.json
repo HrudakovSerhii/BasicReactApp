@@ -1,0 +1,19 @@
+{
+  "name": "basicreactapp",
+  "version": "1.0.0",
+  "description": "basic setup for react/redux/webpack project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "serhiiH",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-cli": "^2.1.3"
+  }
+}
