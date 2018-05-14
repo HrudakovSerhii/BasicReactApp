@@ -30,7 +30,9 @@ module.exports = {
 		hot        : true
 	},
 	plugins: [
-		new HtmlWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			template: 'src/index.html'
+		}),
 		new WEBPACK.HotModuleReplacementPlugin()
 	],
 	resolve: {
@@ -38,13 +40,16 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			// {
-			// 	test: /\.(js|jsx)$/,
-			// 	exclude: /node_modules/,
-			// 	use: {
-			// 		loader: "babel-loader"
-			// 	}
-			// }
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: ['babel-preset-env']
+					}
+				}
+			}
 			// {
 			// 	test: /\.scss$/,
 			// 	loaders: ["style-loader","css-loader","sass-loader"]
